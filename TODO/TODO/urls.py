@@ -23,5 +23,9 @@ urlpatterns = [
     path('',views.home,name='home'),
     path('signup/',views.signup,name='signup'),
     path('login_page/',views.login_page,name='login_page'),
-    path('logout_page/',views.logout_page,name='logout_page')
+    path('logout_page/',views.logout_page,name='logout_page'),
+    path('todo_list',views.todo_list,name='todo_list'),
+    path('delete_todo/<int:id>/', views.delete_todo, name='delete_todo'),
+    path('update_todo/<int:id>/', views.update_todo, name='update_todo'),
+    path('complete_todo/<int:id>/', views.complete_todo, name='complete_todo'),
 ]

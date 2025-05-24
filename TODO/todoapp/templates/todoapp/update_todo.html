@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block start %}
+<section class="vh-100" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-9 col-xl-7">
+        <div class="card rounded-3">
+          <div class="card-body p-4">
+
+            <h4 class="text-center my-3 pb-3">To Do App</h4>
+
+            <form method="post" class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2" enctype="multipart/form-data">
+                {%csrf_token %}
+              <div class="col-12">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" name="title" value="{{todo.title}}" id="form1" class="form-control" />
+                  <label class="form-label"  for="form1">Enter a task here</label>
+                </div>
+                <div class="col-12">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="date" name="date" id="form2" class="form-control" />
+                  <label class="form-label" for="form2">Enter Deadline</label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">UPDATE</button>
+              </div>
+{% endblock %}
