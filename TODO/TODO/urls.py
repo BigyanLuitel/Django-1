@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from todoapp import views
+from portfolio import views as portfolio_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +29,5 @@ urlpatterns = [
     path('delete_todo/<int:id>/', views.delete_todo, name='delete_todo'),
     path('update_todo/<int:id>/', views.update_todo, name='update_todo'),
     path('complete_todo/<int:id>/', views.complete_todo, name='complete_todo'),
+    path('index/',portfolio_views.index,name='index'),
 ]
